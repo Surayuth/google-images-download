@@ -725,6 +725,7 @@ class googleimagesdownload:
                        format, ignore_urls):
         if not silent_mode:
             if print_urls or no_download:
+                print('test.....')
                 print("Image URL: " + image_url)
         if ignore_urls:
             if any(url in image_url for url in ignore_urls.split(',')):
