@@ -38,6 +38,7 @@ import codecs
 import socket
 
 collect_urls = []
+collect_full_names = []
 
 args_list = ["keywords", "keywords_from_file", "prefix_keywords", "suffix_keywords",
              "limit", "format", "color", "color_type", "usage_rights", "size",
@@ -816,6 +817,7 @@ class googleimagesdownload:
                 # return image name back to calling method to use it for thumbnail downloads
                 download_status = 'success'
                 download_message = "Completed Image ====> " + prefix + str(count) + "." + image_name
+                collect_full_names.append(prefix + str(count) + "." + image_name)
                 return_image_name = prefix + str(count) + "." + image_name
 
                 # image size parameter
