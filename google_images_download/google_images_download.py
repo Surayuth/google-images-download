@@ -404,6 +404,7 @@ class googleimagesdownload:
         main_directory = "downloads"
         extensions = (".jpg", ".gif", ".png", ".bmp", ".svg", ".webp", ".ico")
         url = image_url
+        print('test: {}'.format(url))
         try:
             os.makedirs(main_directory)
         except OSError as e:
