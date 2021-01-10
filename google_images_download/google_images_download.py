@@ -37,6 +37,8 @@ import re
 import codecs
 import socket
 
+collect_urls = []
+
 args_list = ["keywords", "keywords_from_file", "prefix_keywords", "suffix_keywords",
              "limit", "format", "color", "color_type", "usage_rights", "size",
              "exact_size", "aspect_ratio", "type", "time", "time_range", "delay", "url", "single_image",
@@ -725,7 +727,7 @@ class googleimagesdownload:
                        format, ignore_urls):
         if not silent_mode:
             if print_urls or no_download:
-                print('test.....')
+                collect_urls.append(image_url)
                 print("Image URL: " + image_url)
         if ignore_urls:
             if any(url in image_url for url in ignore_urls.split(',')):
